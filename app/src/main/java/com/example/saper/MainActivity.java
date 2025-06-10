@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Intent intent = new Intent(this, MyService.class);
+        startService(intent); // bez tego serwice będzie niszcony po obrocie ekranu
         bindService(intent, connection, BIND_AUTO_CREATE);
     }
 
